@@ -11,6 +11,6 @@ docker push friedmanss/multi-server:$SHA
 docker push friedmanss/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=friedmanss/multi-server:$SHA
 kubectl set image deployments/client-deployment client=friedmanss/multi-client:$SHA
+kubectl set image deployments/server-deployment server=friedmanss/multi-server:$SHA
 kubectl set image deployments/worker-deployment worker=friedmanss/multi-worker:$SHA
